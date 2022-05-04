@@ -10,8 +10,8 @@ const GalleryView = ({ galleries }) => {
 	console.log("gal", gal);
 	return (
 		<>
-			<h2 className='mx-auto rounded-xl p-2 text-center  selection:text-red-500 text-white text-xl w-10/12 bg-blue-500'>
-				view {gal.title}
+			<h2 className='mx-auto rounded-xl p-2 text-center uppercase selection:text-red-500 selection:bg-blue-600 selection:rounded-3xl text-white text-xl w-10/12 bg-blue-500'>
+				view {gal.name}
 			</h2>
 			<Switch>
 				<Route exact path={"/galleries/:Id"}>
