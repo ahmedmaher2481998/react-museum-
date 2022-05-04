@@ -1,5 +1,5 @@
 import { NavLink, useRouteMatch } from "react-router-dom";
-import "./GalleryNavigation.css";
+// import "./GalleryNavigation.css";
 
 // import Gallery from "./Gallery";
 const GalleryNavigation = ({ galleries }) => {
@@ -12,7 +12,7 @@ const GalleryNavigation = ({ galleries }) => {
 					<>
 						<NavLink
 							className='hover:bg-sky-500 hover:text-white w-8/12
-                             text-center p-2 rounded-2xl my-1 mx-auto  text-bold  text-xl'
+                            text-center p-2 rounded-2xl my-1 mx-auto  text-bold  text-xl'
 							to={`${url}/${gallery.id}`}
 						>
 							{gallery.name}
