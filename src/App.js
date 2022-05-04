@@ -5,25 +5,34 @@ import GalleryView from "./components/GalleryView/index";
 function App() {
 	return (
 		<>
-			<NavLink to={"/"}>Gallery Navigation</NavLink>
+			<NavLink to={"/galleries"}>Gallery Navigation</NavLink>
 			<br />
-			<NavLink to={"/galleryview"}>Gallery View</NavLink>
+			<NavLink to={"/"}>Home</NavLink>
+			<br />
+			{/* <NavLink to={"/galleryview"}>Gallery View</NavLink> */}
 			<div className='page-wrappe'>
 				<br />
 				<hr />
 				<br />
 			</div>
-			<Route path={"/"}>
-				<GalleryNavigation galleries={data.records} />{" "}
+			<Route exact path={"/"}>
+				<h2>Harvard Art Museum</h2>
+				<p>
+					Look, but Don't Touch. Please select a Gallery in the
+					navigation bar.
+				</p>
 			</Route>
 
 			<Switch>
+				<Route exact path={"/galleries"}>
+					<GalleryNavigation galleries={data.records} />{" "}
+				</Route>
 				<Route exact path={"/galleries/:Id"}>
 					<GalleryView galleries={data.records} />
 				</Route>
-				{/* <Route>
+				<Route>
 					<h2>Page Not Found!!</h2>
-				</Route> */}
+				</Route>
 			</Switch>
 		</>
 	);
