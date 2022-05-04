@@ -4,12 +4,13 @@ import "./GalleryNavigation.css";
 // import Gallery from "./Gallery";
 const GalleryNavigation = ({ galleries }) => {
 	const { url } = useRouteMatch();
+	// console.log(url, "index");
 	return (
 		<nav>
 			{galleries.map((gallery) => {
 				return (
 					<>
-						<NavLink to={`${url}/${gallery.id}`}>
+						<NavLink to={`${url}galleries/${gallery.id}`}>
 							{gallery.name}
 						</NavLink>
 						<br />
