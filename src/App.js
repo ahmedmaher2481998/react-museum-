@@ -1,20 +1,21 @@
 import data from "./data/harvardArt";
 import { NavLink, Route, Switch } from "react-router-dom";
+import NorFound from "./components/NotFound";
 import GalleryNavigation from "./components/GalleryNavigation/index";
 import GalleryView from "./components/GalleryView/index";
 function App() {
 	return (
 		<>
-			<NavLink to={"/galleries"}>Gallery Navigation</NavLink>
-			<br />
-			<NavLink to={"/"}>Home</NavLink>
+			<NavLink className={"link-primary"} to={"/galleries"}>
+				Gallery Navigation
+			</NavLink>
+
+			<NavLink className={"link-primary"} to={"/"}>
+				Home
+			</NavLink>
 			<br />
 			{/* <NavLink to={"/galleryview"}>Gallery View</NavLink> */}
-			<div className='page-wrappe'>
-				<br />
-				<hr />
-				<br />
-			</div>
+			<div className='mb-8'></div>
 			<Route exact path={"/"}>
 				<h2>Harvard Art Museum</h2>
 				<p>
@@ -31,7 +32,7 @@ function App() {
 					<GalleryView galleries={data.records} />
 				</Route>
 				<Route>
-					<h2>Page Not Found!!</h2>
+					<NorFound />
 				</Route>
 			</Switch>
 		</>

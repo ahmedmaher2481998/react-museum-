@@ -1,21 +1,18 @@
 import { useParams, NavLink, useRouteMatch } from "react-router-dom";
+import ArtImageTitle from "../ArtImageTitle/index";
+import "../../index.css";
 const GalleryView = ({ galleries }) => {
 	const { Id } = useParams();
-	const { url } = useRouteMatch();
+	// const { url } = useRouteMatch();
 	const gal = galleries.find((el) => el.id === +Id);
+	console.log(gal);
 
 	return (
 		<>
-			<h1>hello {Id}</h1>
-			<p>{gal.name}</p>
-			{/* {galleries.map((gal) => {
-				return +Id === +gal.id ? (
-					<h1>{gal}</h1>
-				) : // <NavLink key={gal.id} to={`${url}${gal.id}`}>
-				// 	{gal.name}
-				// </NavLink>
-				null;
-			})} */}
+			<h2 className='mx-auto rounded-xl p-2 text-center  selection:text-red-500 text-white text-xl w-10/12 bg-blue-500'>
+				gallery view here
+			</h2>
+			<ArtImageTitle art={gal} />
 		</>
 	);
 };
