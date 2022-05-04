@@ -10,5 +10,8 @@
 @tailwind components;
 @tailwind utilities;
 .link-primary {
-	@apply my-6 text-white rounded-xl text-center p-2 mx-4  bg-emerald-400;
+	@apply my-6 text-white bg-emerald-400 rounded-xl text-center p-2 mx-4;
+}
+body {
+	@apply bg-sky-300;
 }
